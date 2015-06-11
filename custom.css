@@ -1,0 +1,318 @@
+html, body{
+	font-family:Ubuntu;
+}
+
+/*.logorong{
+    background-image: url("assets/logo_rond.svg");
+    background-position: 25% 25%;
+    background-repeat: no-repeat;
+    -webkit-background-size: 150px;
+    -moz-background-size: 150px;
+    background-size: 150px;
+    width: 150px;
+    height: 42px;
+    margin: auto auto auto 26px;
+}*/
+
+
+.iphone-container{
+	width: 215px;
+	height: 395px;
+	background-image: url("image%20site/iphone-empty.png");
+	background-size: cover;
+	padding: 50px 10px;
+	display: inline-block;
+
+}
+.iphone-container-2{
+	height: 430px;
+	width: 420px;
+	overflow-y: auto;
+	overflow-x: hidden;	
+	margin-top: 87px;
+	margin-left:24px;
+}
+.iphone-container-2::-webkit-scrollbar {
+ display: none;
+}
+.iphonearenephoto{
+	width: 414px;
+	height: auto;
+	padding-right: 30px;
+	z-index: 2;
+}
+
+@keyframes flecheOne {
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+}
+
+@keyframes flecheTwo {
+    0%   {opacity: 0.5}
+    50%  {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+@-o-keyframes flecheOne {
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+}
+
+@-o-keyframes flecheTwo {
+    0%   {opacity: 0.5}
+    50%  {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+@-ms-keyframes flecheOne {
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+}
+
+@-ms-keyframes flecheTwo {
+    0%   {opacity: 0.5}
+    50%  {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+@-moz-keyframes flecheOne {
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+}
+
+@-moz-keyframes flecheTwo {
+    0%   {opacity: 0.5}
+    50%  {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+
+@-webkit-keyframes flecheOne{
+    0%   {opacity: 1}
+    50%  {opacity: 0.5}
+    100% {opacity: 1}
+} 
+
+@-webkit-keyframes flecheTwo {
+    0%   {opacity: 0.5}
+    50%  {opacity: 1}
+    100% {opacity: 0.5}
+}
+
+
+.fleche2{
+	margin-top: 430px;
+	margin-left: 200px;
+
+	width: auto;
+	height: auto;
+	z-index: 1;
+	position: absolute;
+	-webkit-animation: flecheTwo 1s linear infinite;
+	animation: flecheTwo 1s linear infinite;
+	-o-animation: flecheTwo 1s linear infinite;
+	-ms-animation: flecheTwo 1s linear infinite;
+	-moz-animation: flecheTwo 1s linear infinite;
+
+}
+
+.fleche1{
+	margin-top: 450px;
+	margin-left: 200px;
+
+	width: auto;
+	height: auto;
+	z-index: 1;
+	position: absolute;
+	-webkit-animation: flecheOne 1s linear infinite;
+	animation: flecheOne 1s linear infinite;
+	-o-animation: flecheOne 1s linear infinite;
+	-ms-animation: flecheOne 1s linear infinite;
+	-moz-animation: flecheOne 1s linear infinite;
+}
+
+
+/*
+#iphonenote{
+	width: 300px;
+	height: 70%;
+	margin-left: 30%;
+}*/
+
+.headerond{
+	margin-top: 3%;
+	margin-right: 20%;
+	position: absolute;
+	width: 80px;
+	height: 80px;
+	z-index: 1;
+}
+
+#note{
+	width: 54%;
+	height: auto;
+}
+
+#subtitle{
+	font-size: 0.5em;
+	margin-left: 40%;
+	margin-top: 1%;
+}
+
+
+.image_png{
+	width: 90%;
+	height: 900px;
+	left: -30%;
+	margin-top: 42%;
+}
+
+
+.page-games-around-you{
+	height: 800px;
+	position:relative;
+
+}
+
+
+.page-socialize{
+	height: 700px;
+
+}
+
+.page-organize {
+	height: 850px;
+}
+
+.page.page-every-game-count{
+	height: 702px;
+ }
+
+#iphonenote{
+	left: 20%;
+}
+
+#textenote{
+	padding-top: 100px;
+}
+
+.organiser{
+	padding-top: 100px;
+}
+
+#parties{
+	margin-top: 100px;
+	width: 300px;
+	height: 560px;
+}
+
+.page-footer{
+	height: 350px;
+}
+@media only screen and (max-width :760px){
+	.image_png{
+		width: 220px;
+		height: 350px;
+		margin-left: 10%;
+		margin-top: 50px;
+	}
+
+	.organiser{
+	padding-top: 0px;
+}
+
+	.page-games-around-you .phone{
+	width: 180px;
+	height: 350px;
+	z-index: 2;
+	position: relative;
+	right: 0;
+	bottom: -120px;
+ }
+
+	#parties{
+		width: 180px;
+		height: auto;
+		margin-left: 20%;
+		margin-top: 20px;
+	}
+
+	h2{
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+
+	.page-header .logo{
+		-webkit-background-size: 210px;
+    	-moz-background-size: 210px;
+    	background-size: 210px;
+    	left: 50px;
+
+	}
+
+	.headerond{
+		width: 60px;
+		height: 60px;
+		margin-top: 11.5%;
+		margin-left: 5%;
+
+	}
+
+	#subtitle{
+		margin-left: 15%;
+
+	}
+
+
+	.play.blue{
+	  margin-right: 20%;
+
+	}
+
+	.page-socialize .timeline{
+		visibility: hidden;
+	}
+
+	.iphone-container{
+/*		visibility: hidden;
+*/		display: none;
+	}
+
+
+
+	.sms h3 .subtagline {
+    	font-size: 25px;
+    	display: inline-flex;
+/*    	margin-top: 40px;
+*/    	margin-right: auto;
+    	margin-left: auto;
+	}
+	.sms h3 .apple-img {
+    	width: 172px;
+    	height: 60px;
+    	margin: auto;
+	}
+	.sms h3 .google-img {
+    	width: 172px;
+    	height: 60px;
+    	margin: auto;
+	}
+
+
+	#textenote{
+	padding-top: 15px;
+	}
+	.page-organize{
+		height: 360px;
+	}
+
+}
+
+
+
+
+
