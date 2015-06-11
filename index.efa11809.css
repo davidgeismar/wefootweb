@@ -554,9 +554,7 @@ p {
     -ms-flex: 1;
     flex: 1;
 }
-.animate {
-    visibility: hidden;
-}
+
 .animate-ready .animate {
     visibility: visible;
 }
@@ -879,7 +877,7 @@ img {
     bottom: 0;
     width: 80%;
     height: 480px;
-    background-image: url("pageactu.jpg");
+    background-image: url("image%20site/pageactu.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
