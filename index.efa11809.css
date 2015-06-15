@@ -760,7 +760,7 @@ p {
     right: 100px;
 }
 .page-games-around-you {
-    background-image: url("image%20site/background1dark.jpg");
+    background-image: url("image_site/background1dark.jpg");
 }
 .page-games-around-you .content {
     height: 600px;
@@ -812,7 +812,7 @@ p {
 }
 .page-organize {
     display: block;
-    background-image: url("image%20site/background2dark.jpg");
+    background-image: url("image_site/background2dark.jpg");
 }
 .page-organize .content {
     height: 800px;
@@ -877,7 +877,7 @@ img {
     bottom: 0;
     width: 80%;
     height: 480px;
-    background-image: url("image%20site/pageactu.jpg");
+    background-image: url("image_site/pageactu.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;

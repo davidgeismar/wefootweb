@@ -2,7 +2,7 @@ html, body{
 	font-family:Ubuntu;
 }
 
-/*.logorong{
+.logo_rond{
     background-image: url("assets/logo_rond.svg");
     background-position: 25% 25%;
     background-repeat: no-repeat;
@@ -12,7 +12,7 @@ html, body{
     width: 150px;
     height: 42px;
     margin: auto auto auto 26px;
-}*/
+}
 
 
 .iphone-container{
@@ -28,7 +28,7 @@ html, body{
 	height: 430px;
 	width: 420px;
 	overflow-y: auto;
-	overflow-x: hidden;	
+	overflow-x: hidden;
 	margin-top: 87px;
 	margin-left:24px;
 }
@@ -95,7 +95,7 @@ html, body{
     0%   {opacity: 1}
     50%  {opacity: 0.5}
     100% {opacity: 1}
-} 
+}
 
 @-webkit-keyframes flecheTwo {
     0%   {opacity: 0.5}
