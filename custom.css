@@ -18,7 +18,7 @@ html, body{
 .iphone-container{
 	width: 215px;
 	height: 395px;
-	background-image: url("image%20site/iphone-empty.png");
+	background-image: url("image_site/iphone-empty.png");
 	background-size: cover;
 	padding: 50px 10px;
 	display: inline-block;
