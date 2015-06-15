@@ -269,6 +269,12 @@ p {
     bottom: 0;
     left: 0;
 }
+
+#video_background {
+  background-image: url("image_site/background1.jpg");
+  z-index: 0;
+
+}
 .page-header {
     background-image: url("assets/jogabo-landing-bg.59f5275b.jpg");
     background-position: 50% 50%;
