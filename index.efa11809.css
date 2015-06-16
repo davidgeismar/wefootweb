@@ -268,16 +268,9 @@ p {
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 3;
-}
-
-#video_background {
-  background-image: url("image_site/background1.jpg");
-  z-index: 0;
-
 }
 .page-header {
-    background-image: url("assets/jogabo-landing-bg.59f5275b.jpg");
+    background-image: url("image_site/background1.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -344,7 +337,10 @@ p {
 .page-header .content .sample-img {
     float: right;
     width: auto;
-    height: 90%}
+    height: 90%;
+  
+}
+
 .page-header .content .download-button-container {
     position: absolute;
     bottom: 0;
@@ -567,8 +563,9 @@ p {
 }
 .page-header {
     height: 100%;
-    background-image: none;
-}
+/*    z-index: 0;
+*//*    background-image: none;
+*/}
 .page {
     overflow: hidden;
 }
@@ -706,7 +703,7 @@ p {
     -moz-background-size: 220px;
     background-size: 220px;
     width: 240px;
-    z-index: 1;
+    z-index: 2;
 }
 .page-header .tagline {
     text-align: center;
@@ -1025,7 +1022,7 @@ img {
 }
 }}@media only screen and (min-width:390px) {
     .page-header .content .download-button {
-    width: 55%
+    width: 55%;
     height:300px;
 }
 .page-header .content .download-button-container {

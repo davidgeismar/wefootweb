@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bootstrap-3.3.4-dist/css/bootstrap.min.css">
     <link href="http://fonts.googleapis.com/css?family=Raleway:400,300,500,700" rel="stylesheet" type="text/css">
-    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="index.efa11809.css">
     <link rel="stylesheet" type="text/css" href="custom.css">
     <link href='http://fonts.googleapis.com/css?family=Ubuntu' rel='stylesheet' type='text/css'>
@@ -36,7 +35,6 @@
             <div class="headerond"><img class="headerond" src="image_site/logo_rond.svg"/></div>
             <h1 class="ir logo">WEFOOT</h1>
             <div class="descriptive-content">
-                <img src="assets/jogabo-landing-app-sample.464c0538.png" class="sample-img">
                 <div class="description-container"><span class="app-descriptive">Discover</span><span class="app-descriptive bold">Augmented</span><span class="app-descriptive">Soccer</span><span class="bar-separator"></span><span class="app-descriptive small bold">Play. Track. Share</span>
                 </div>
             </div>
@@ -45,11 +43,11 @@
             </div>
         </div>
         <div class="sms desktop">
-         <strong><h3 class="tagline">Découvre le football connecté</strong>
-         <p id="subtitle">Bientot disponible sur</p>
-         <div class="subtagline"><a href="" class="center-link"><img src="assets/app-store-badge-us.58452f92.png" class="img-button apple-img"></a><a href="" class="center-link"><img alt="Get it on Google Play" src="assets/android.png" class="img-button google-img"></a></div></h3>
-     </div>
-     <div class="video-wrap" id= "video_background">
+            <strong><h3 class="tagline">Découvre le football connecté</strong>
+             <p id="subtitle">Bientot disponible sur</p>
+            <div class="subtagline"><a href="" class="center-link"><img src="assets/app-store-badge-us.58452f92.png" class="img-button apple-img"></a><a href="" class="center-link"><img alt="Get it on Google Play" src="assets/android.png" class="img-button google-img"></a></div></h3>
+         </div>
+     <div class="video-wrap">
   <!--           <video id="video-header" preload="auto">
                 <source src="wefoot_video_home_page.webm" type="video/webm">
                     <source src="wefoot_video_home_page.mp4" type="video/mp4">
@@ -66,7 +64,7 @@
                 <section class="page page-every-game-count">
                     <div class="container">
                         <div class="col-md-6 col-xs-12">
-                            <img src="image_site/iphone_appli.png" class="image_png text-center">
+                            <img src="image_site/iPhone_appli.png" class="image_png text-center">
                         </div>
                         <div class="row">
                             <div class="col-md-6 col-xs-12 organiser" >
@@ -174,12 +172,12 @@
                             </div>
 
 
-                    <!-- Message
+                    
                             <div class="form-row clearfix textbox">
                                 <label for="message" class="req">Message *</label>
-                                <div class="form-value"><textarea name="message" class="message" id="message" rows="15" cols="50"></textarea></div>
+                                <div class="form-value"><textarea name="message" class="message" id="message" rows="8" cols="50"></textarea></div>
                             </div>
-                        -->
+                       
                           <!--   <div id="form-note">
                                 <div class="alert alert-error">
                                     <h6><strong>Error</strong>: Please check your entries!</h6>
@@ -207,6 +205,7 @@
 
         </div>
     </section>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
     <script src="js/core.eb44a0ca.js"></script>
     <script src="js/index.e2b379d0.js"></script>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.js"></script>
@@ -215,6 +214,19 @@
         $(function(){
           $(".player").YTPlayer();
       });
+
+$(document).ready(function() {
+    $(".scrolldown").click(function() {
+    $("html, body").animate( {
+    scrollTop: $(".page-every-game-count").offset().top
+}
+, "slow");
+}), $doc.width()>=DESKTOP_WIDTH_THRESHOLD?loadImagesForDesktop():$window.on("resize", loadImagesForDesktop);
+});
+
+jQuery('.scroll-to-arrow-contact').click(function() {
+    $('html, body').animate( {scrollTop: $('#contact').offset().top },2000);
+}); 
     </script>
 </body>
 

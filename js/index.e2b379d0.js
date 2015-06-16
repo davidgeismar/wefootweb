@@ -35,7 +35,7 @@ function refresh() {
 }, $(".fos-video").on("click", function() {
     openVideo("");
 }
-), !isTouch) {
+), !true) {
     $body.removeClass("no-video"), player=window.videojs($video[0].id,  {
     controls: !1, autoplay:!0, preload:"auto", loop:!0, techOrder:["html5", "flash"]
 }
@@ -53,20 +53,6 @@ setTimeout(function() {
 }
 , 1e3), $(".download-button").click(function() {
     var a=navigator.userAgent;
-    a.indexOf("iPhone")>-1||a.indexOf("iPod")>-1||a.indexOf("iPad")>-1?window.open("https: //itunes.apple.com/app/id930089243"):/Android/.test(a)&&window.open("https://play.google.com/store/apps/details?id=com.jogabo.app");
+    a.indexOf("iPhone")>-1||a.indexOf("iPod")>-1||a.indexOf("iPad")>-1?window.open(""):/Android/.test(a)&&window.open("");
 }
-), $doc.ready(function() {
-    $(".scrolldown").click(function() {
-    $("html, body").animate( {
-    scrollTop: $(".page-every-game-count").offset().top
-}
-, "slow");
-}), $doc.width()>=DESKTOP_WIDTH_THRESHOLD?loadImagesForDesktop():$window.on("resize", loadImagesForDesktop);
-});
-
-
-
-jQuery('.scroll-to-arrow-contact').click(function() {
-    $('html, body').animate( { scrollTop: $('#contact').offset().top }, 900, 'easeIn' );
-});
-    
+)
