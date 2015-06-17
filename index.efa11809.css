@@ -270,7 +270,7 @@ p {
     left: 0;
 }
 .page-header {
-    background-image: url("image_site/background1.jpg");
+    background-image: url("assets/jogabo-landing-bg.59f5275b.jpg");
     background-position: 50% 50%;
     background-repeat: no-repeat;
     -webkit-background-size: cover;
@@ -337,10 +337,7 @@ p {
 .page-header .content .sample-img {
     float: right;
     width: auto;
-    height: 90%;
-  
-}
-
+    height: 90%}
 .page-header .content .download-button-container {
     position: absolute;
     bottom: 0;
@@ -563,9 +560,8 @@ p {
 }
 .page-header {
     height: 100%;
-/*    z-index: 0;
-*//*    background-image: none;
-*/}
+    background-image: none;
+}
 .page {
     overflow: hidden;
 }
@@ -703,7 +699,7 @@ p {
     -moz-background-size: 220px;
     background-size: 220px;
     width: 240px;
-    z-index: 2;
+    z-index: 1;
 }
 .page-header .tagline {
     text-align: center;
@@ -764,7 +760,7 @@ p {
     right: 100px;
 }
 .page-games-around-you {
-    background-image: url("image_site/background1dark.jpg");
+    background-image: url("image%20site/background1dark.jpg");
 }
 .page-games-around-you .content {
     height: 600px;
@@ -816,7 +812,7 @@ p {
 }
 .page-organize {
     display: block;
-    background-image: url("image_site/background2dark.jpg");
+    background-image: url("image%20site/background2dark.jpg");
 }
 .page-organize .content {
     height: 800px;
@@ -881,7 +877,7 @@ img {
     bottom: 0;
     width: 80%;
     height: 480px;
-    background-image: url("image_site/pageactu.jpg");
+    background-image: url("image%20site/pageactu.jpg");
     background-repeat: no-repeat;
     -webkit-background-size: 100%;
     -moz-background-size: 100%;
@@ -1022,7 +1018,7 @@ img {
 }
 }}@media only screen and (min-width:390px) {
     .page-header .content .download-button {
-    width: 55%;
+    width: 55%
     height:300px;
 }
 .page-header .content .download-button-container {

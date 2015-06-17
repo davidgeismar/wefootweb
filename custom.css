@@ -2,7 +2,7 @@ html, body{
 	font-family:Ubuntu;
 }
 
-.logo_rond{
+/*.logorong{
     background-image: url("assets/logo_rond.svg");
     background-position: 25% 25%;
     background-repeat: no-repeat;
@@ -12,13 +12,13 @@ html, body{
     width: 150px;
     height: 42px;
     margin: auto auto auto 26px;
-}
+}*/
 
 
 .iphone-container{
 	width: 215px;
 	height: 395px;
-	background-image: url("image_site/iphone-empty.png");
+	background-image: url("image%20site/iphone-empty.png");
 	background-size: cover;
 	padding: 50px 10px;
 	display: inline-block;
@@ -28,7 +28,7 @@ html, body{
 	height: 430px;
 	width: 420px;
 	overflow-y: auto;
-	overflow-x: hidden;
+	overflow-x: hidden;	
 	margin-top: 87px;
 	margin-left:24px;
 }
@@ -95,7 +95,7 @@ html, body{
     0%   {opacity: 1}
     50%  {opacity: 0.5}
     100% {opacity: 1}
-}
+} 
 
 @-webkit-keyframes flecheTwo {
     0%   {opacity: 0.5}
@@ -149,7 +149,7 @@ html, body{
 	position: absolute;
 	width: 80px;
 	height: 80px;
-	z-index: 2;
+	z-index: 1;
 	left: 6%;
 }
 
@@ -213,7 +213,7 @@ html, body{
 }
 
 .page-footer{
-	height: 500px;
+	height: 350px;
 }
 
 

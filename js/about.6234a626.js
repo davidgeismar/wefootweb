@@ -8,20 +8,22 @@ function throttle(a, b) {
     var a=$container.width(), b=$container.height(), c=16/9, d=a/b;
     c>d?(player.width(b*c).height(b), $video.css("top", 0).css("left", -(b*c-a)/2).css("height", b), $("#video_html5_api").css("width", b*c), $("#video_flash_api").css("width", b*c).css("height", b)): (player.width(a).height(a/c), $video.css("top", -(a/c-b)/2).css("left", 0).css("height", a/c), $("#video_html5_api").css("width", "100%"), $("#video_flash_api").css("width", a).css("height", a/c));
 }
-function refresh() {
-    updateVideoSize(), $doc.width()>=980?($phoneOrganize.prop("src", $phoneOrganize.data("large-src")), skrollr.init( {
+function updateFooterSize() {
+    $footer.height(window.innerHeight);
+}
+function updateWheel() {
+    var a=Math.min($brand.width(), $brand.height());
+    $wheel.css( {
+    "background-size": a;
+}
+);
+}function refresh() {
+    updateFooterSize(), updateVideoSize(), updateWheel(), $doc.width()>=980?skrollr.init( {
     smoothScrolling: !1, forceHeight:!1, render:function(a) {
     a.curTop>570?player.hide(): player.show();
 }
-})):skrollr.get()&&($phoneOrganize.prop("src", $phoneOrganize.data("small-src")), skrollr.get().destroy());
-}function loadImagesForDesktop() {
-    if($doc.width()>=DESKTOP_WIDTH_THRESHOLD) {
-    var a;
-    $("img").each(function(b, c) {
-    a=c.getAttribute("data-src"), a&&(c.src=a);
-}
-), $window.off("resize", loadImagesForDesktop);
-}}var isTouch="ontouchstart"in window||navigator.msMaxTouchPoints>0, skrollr=window.skrollr, $window=$(window), $body=$(document.body), $doc=$(document), $container=$(".page-header"), $video=$("#video-header"), $phoneOrganize=$(".page-organize .phone"), $popup=$(), $layover=$(), player, openVideo, closeVideo, DESKTOP_WIDTH_THRESHOLD=960;
+}):skrollr.get()&&skrollr.get().destroy();
+}var $window=$(window), $body=$(document.body), $doc=$(document), skrollr=window.skrollr, isTouch="ontouchstart"in window||navigator.msMaxTouchPoints>0, $container=$(".page-header"), $video=$("#video-about-us"), $brand=$(".page-brand"), $footer=$(".page-talksoon"), $wheel=$(".big-logo"), $popup=$(), $layover=$(), player, openVideo, closeVideo;
     if(closeVideo=function() {
     $body.css("overflow", ""), $doc.off("click", closeVideo), $popup.removeClass("fadeout"), $layover.removeClass("fadeout"), setTimeout(function() {
     $popup.remove(), $layover.remove();
@@ -32,12 +34,16 @@ function refresh() {
     $popup.removeClass("fadeout"), $layover.removeClass("fadeout"), $doc.on("click", closeVideo);
 }
 , 20));
-}, $(".fos-video").on("click", function() {
-    openVideo("");
+}, $(".video-mamade").on("click", function() {
+    openVideo("1QMsu7KRQ8w");
 }
-), !isTouch) {
+), $(".brand-video").on("click", function() {
+    openVideo("DrgyANiVr3k");
+}
+), isTouch)updateWheel();
+    else {
     $body.removeClass("no-video"), player=window.videojs($video[0].id,  {
-    controls: !1, autoplay:!0, preload:"auto", loop:!0, techOrder:["html5", "flash"]
+    controls: !0, autoplay:!0, preload:"auto", loop:!0, techOrder:["html5", "flash"];
 }
 );
     var hidden, visibilityChange;
@@ -48,25 +54,3 @@ function refresh() {
 ;
     document.addEventListener(visibilityChange, handleVisibilityChange, !1), $window.on("resize", throttle(refresh, 100)), refresh();
 }
-setTimeout(function() {
-    $body.addClass("animate-ready");
-}
-, 1e3), $(".download-button").click(function() {
-    var a=navigator.userAgent;
-    a.indexOf("iPhone")>-1||a.indexOf("iPod")>-1||a.indexOf("iPad")>-1?window.open("https: //itunes.apple.com/app/id930089243"):/Android/.test(a)&&window.open("https://play.google.com/store/apps/details?id=com.jogabo.app");
-}
-), $doc.ready(function() {
-    $(".scrolldown").click(function() {
-    $("html, body").animate( {
-    scrollTop: $(".page-every-game-count").offset().top
-}
-, "slow");
-}), $doc.width()>=DESKTOP_WIDTH_THRESHOLD?loadImagesForDesktop():$window.on("resize", loadImagesForDesktop);
-});
-
-
-
-jQuery('.scroll-to-arrow-contact').click(function() {
-    $('html, body').animate( { scrollTop: $('#contact').offset().top }, 900, 'easeIn' );
-});
-    

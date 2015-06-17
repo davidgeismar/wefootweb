@@ -1,3 +1,47 @@
+ function IsEmail(email) {
+  var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+  return regex.test(email);
+}
+
+    // Lorsque je soumets le formulaire
+    $('#contact-form').on('submit', function(e) {
+        e.preventDefault(); // J'empêche le comportement par défaut du navigateur, c-à-d de soumettre le formulaire
+
+        var $this = $(this); // L'objet jQuery du formulaire
+
+        // Je récupère les valeurs
+        var name = $('#name').val();
+        var email = $('#email').val();
+        var message = $('#message').val();
+
+        // Je vérifie une première fois pour ne pas lancer la requête HTTP
+        // si je sais que mon PHP renverra une erreur
+
+        if (!name || !email || !IsEmail(email)){
+            alert('Veuillez entrer un nom et/ou une addresse mail valide');
+        }
+        else
+        {
+            var mailContent = "Nouvelle demande de newsletter "+name+"\n Adresse mail : "+email;
+            if(message)
+                mailContent += " \n Message : "+message;
+
+            // Envoi de la requête HTTP en mode asynchrone
+            $.ajax({
+                url: $this.attr('action'), // Le nom du fichier indiqué dans le formulaire
+                method:"POST",
+                dataType: "json", // La méthode indiquée dans le formulaire (get ou post)
+                data: {message: message}, // Je sérialise les données (j'envoie toutes les valeurs présentes dans le formulaire)
+                success: function(data, textStatus, xhr) {
+                    if(xhr.status==200)
+                    alert('Love, \n Wefoot');
+                }
+            });
+        }
+    });
+
+
+
 ! function(a, b) {
     "object" == typeof module && "object" == typeof module.exports ? module.exports = a.document ? b(a, !0) : function(a) {
         if (!a.document) throw new Error("jQuery requires a window with a document");
@@ -4486,7 +4530,7 @@ function() {
     var Z = this;
     Z.sd = f, $("videojs", u), $("_V_", u), $("videojs.options", u.options), $("videojs.players", u.va), $("videojs.cache", u.pa), $("videojs.Component", u.c), u.c.prototype.dispose = u.c.prototype.D, u.c.prototype.createEl = u.c.prototype.e, u.c.prototype.el = u.c.prototype.r, u.c.prototype.addChild = u.c.prototype.Y, u.c.prototype.children = u.c.prototype.children, u.c.prototype.on = u.c.prototype.d, u.c.prototype.off = u.c.prototype.t, u.c.prototype.one = u.c.prototype.R, u.c.prototype.trigger = u.c.prototype.k, u.c.prototype.triggerReady = u.c.prototype.Ta, u.c.prototype.show = u.c.prototype.show, u.c.prototype.hide = u.c.prototype.v, u.c.prototype.width = u.c.prototype.width, u.c.prototype.height = u.c.prototype.height, u.c.prototype.dimensions = u.c.prototype.Mc, u.c.prototype.ready = u.c.prototype.P, u.c.prototype.fadeIn = u.c.prototype.$, u.c.prototype.fadeOut = u.c.prototype.ta, $("videojs.Player", u.C), u.C.prototype.dispose = u.C.prototype.D, u.C.prototype.requestFullScreen = u.C.prototype.wa, u.C.prototype.cancelFullScreen = u.C.prototype.pb, u.C.prototype.bufferedPercent = u.C.prototype.Ha, $("videojs.MediaLoader", u.Fc), $("videojs.TextTrackDisplay", u.$b), $("videojs.ControlBar", u.da), $("videojs.Button", u.o), $("videojs.PlayToggle", u.Xb), $("videojs.FullscreenToggle", u.Da), $("videojs.BigPlayButton", u.Wa), $("videojs.LoadingSpinner", u.Vb), $("videojs.CurrentTimeDisplay", u.Ya), $("videojs.DurationDisplay", u.Za), $("videojs.TimeDivider", u.ac), $("videojs.RemainingTimeDisplay", u.gb), $("videojs.Slider", u.M), $("videojs.ProgressControl", u.fb), $("videojs.SeekBar", u.Yb), $("videojs.LoadProgressBar", u.bb), $("videojs.PlayProgressBar", u.Wb), $("videojs.SeekHandle", u.hb), $("videojs.VolumeControl", u.jb), $("videojs.VolumeBar", u.ib), $("videojs.VolumeLevel", u.bc), $("videojs.VolumeHandle", u.kb), $("videojs.MuteToggle", u.fa), $("videojs.PosterImage", u.eb), $("videojs.Menu", u.la), $("videojs.MenuItem", u.L), $("videojs.SubtitlesButton", u.Ea), $("videojs.CaptionsButton", u.Ca), $("videojs.ChaptersButton", u.Sb), $("videojs.MediaTechController", u.q), u.q.prototype.features = u.q.prototype.j, u.q.prototype.j.volumeControl = u.q.prototype.j.U, u.q.prototype.j.fullscreenResize = u.q.prototype.j.jc, u.q.prototype.j.progressEvents = u.q.prototype.j.Mb, u.q.prototype.j.timeupdateEvents = u.q.prototype.j.Pb, $("videojs.Html5", u.m), u.m.Events = u.m.$a, u.m.isSupported = u.m.isSupported, u.m.canPlaySource = u.m.nb, u.m.prototype.setCurrentTime = u.m.prototype.fd, u.m.prototype.setVolume = u.m.prototype.ld, u.m.prototype.setMuted = u.m.prototype.jd, u.m.prototype.setPreload = u.m.prototype.kd, u.m.prototype.setAutoplay = u.m.prototype.ed, u.m.prototype.setLoop = u.m.prototype.hd, $("videojs.Flash", u.l), u.l.isSupported = u.l.isSupported, u.l.canPlaySource = u.l.nb, u.l.onReady = u.l.onReady, $("videojs.TextTrack", u.V), u.V.prototype.label = u.V.prototype.label, $("videojs.CaptionsTrack", u.Rb), $("videojs.SubtitlesTrack", u.Zb), $("videojs.ChaptersTrack", u.Tb), $("videojs.autoSetup", u.dc), $("videojs.plugin", u.cd), $("videojs.createTimeRange", u.tb)
 }(), ! function(a, b, c, d, e) {
-    // e = b.location, a.src = "//www.google-analytics.com/__utm.gif?utmwv=5.4.2&utmac=UA-16505296-2&utmn=1&utmhn=" + d(e.hostname) + "&utmsr=" + b.screen.availWidth + "x" + b.screen.availHeight + "&utmul=" + (c.language || c.userLanguage || "").toLowerCase() + "&utmr=" + d(e.href) + "&utmp=" + d(e.hostname + e.pathname) + "&utmcc=__utma%3D1." + Math.floor(1e10 * Math.random()) + ".1.1.1.1%3B&utme=8(vjsv)9(v4.1.0)"
+    e = b.location, a.src = "//www.google-analytics.com/__utm.gif?utmwv=5.4.2&utmac=UA-16505296-2&utmn=1&utmhn=" + d(e.hostname) + "&utmsr=" + b.screen.availWidth + "x" + b.screen.availHeight + "&utmul=" + (c.language || c.userLanguage || "").toLowerCase() + "&utmr=" + d(e.href) + "&utmp=" + d(e.hostname + e.pathname) + "&utmcc=__utma%3D1." + Math.floor(1e10 * Math.random()) + ".1.1.1.1%3B&utme=8(vjsv)9(v4.1.0)"
 }(new Image, window, navigator, encodeURIComponent),
 function(a, b, c) {
     "use strict";
